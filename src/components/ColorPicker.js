@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ColorPicker.css'; // You can create a CSS file for styling
+import './ColorPicker.css';
 
 class ColorPicker extends Component {
   constructor(props) {
@@ -28,13 +28,10 @@ class ColorPicker extends Component {
     const { isOpen, selectedColor } = this.state;
 
     return (
-      <div className="container">
-        <div className="box" style={{ backgroundColor: selectedColor }}>
+      <div className="container" style={{ backgroundColor: selectedColor }}>
+        <div className="box">
           <div className="color-picker">
-            <button
-              className="color-button"
-              onClick={this.toggleColorList}
-            >
+            <button className="color-button" onClick={this.toggleColorList}>
               Pick a color
             </button>
             {isOpen && (
